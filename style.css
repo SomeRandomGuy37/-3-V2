@@ -1,0 +1,345 @@
+/* Basic styles */
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    overflow: hidden;
+    animation: backgroundPulse 5s infinite;
+    cursor: none;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+b {
+    font-size: clamp(50px, 10vw, 200px);
+    text-align: center;
+    font-weight: bolder;
+    max-width: 90%;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6375);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeIn 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.1);
+}
+
+.small-text {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 100px; /* Closer to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Ensure it stays on one line */
+    text-align: center;
+    letter-spacing: 0.2px; /* Increase space between letters */
+    line-height: 2; /* Adjust line height for multiple lines */
+    font-family: garamond;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    b {
+        font-size: 120px;
+    }
+    .small-text {
+        font-size: 14px;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes backgroundPulse {
+    0%, 100% {
+        background-color: black;
+    }
+    50% {
+        background-color: #1a1a1a;
+    }
+}
+
+/* Cursor styles */
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+}
+/* Animation styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flipIn {
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+/* Animation classes */
+.bounceIn {
+    animation: bounceIn 0.6s ease;
+}
+
+.flipIn {
+    animation: flipIn 0.6s ease;
+}
+
+
+/* Animation classes */
+.fadeIn {
+    animation: fadeIn 0.5s ease;
+}
+
+.zoomIn {
+    animation: zoomIn 0.5s ease;
+}
+
+.slideInLeft {
+    animation: slideInLeft 0.5s ease;
+}
+
+.slideInRight {
+    animation: slideInRight 0.5s ease;
+}
+
+.rotateIn {
+    animation: rotateIn 0.5s ease;
+}
+/* Keyframes for new transitions */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes diagonalSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-100%, -100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Transition Classes */
+.scaleIn {
+    animation: scaleIn 0.6s ease;
+}
+
+.diagonalSlideIn {
+    animation: diagonalSlideIn 0.6s ease;
+}
+
+/* Existing animations */
+.fadeIn {
+    animation: fadeIn 0.6s ease;
+}
+
+.zoomIn {
+    animation: zoomIn 0.6s ease;
+}
+
+.slideInLeft {
+    animation: slideInLeft 0.6s ease;
+}
+
+.slideInRight {
+    animation: slideInRight 0.6s ease;
+}
+
+.rotateIn {
+    animation: rotateIn 0.6s ease;
+}
+
+.bounceIn {
+    animation: bounceIn 0.6s ease;
+}
+
+.flipIn {
+    animation: flipIn 0.6s ease;
+}
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes diagonalSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-100%, -100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Typewriter Effect */
+.typewriter {
+    animation: typewriter 2s steps(30, end), fadeIn 0.5s ease-out;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+}
+
+/* Fade-out version of the typewriter */
+.typewriter-fade {
+    animation: typewriter 2s steps(30, end), fadeIn 0.5s ease-out;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.typing {
+    animation: typing 2s steps(20, end), fadeIn 0.5s ease-in;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
